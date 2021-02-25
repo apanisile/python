@@ -1,10 +1,15 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent none
     stages {
-        stage('build') {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'python:3.5.1'
+                }
+            }
             steps {
-                sh 'python -m main.py user_details.py'
-                sh 'python --version'
+                sh 'python -m py_compile main.py user_details.py'
+                stash(name: 'compiled-results', includes: '*.py*')
             }
         }
         stage('Test') { 
@@ -23,5 +28,4 @@ pipeline {
             }
         }
     }
-    
 }
