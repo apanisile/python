@@ -31,3 +31,18 @@ class existing_user:
                 print("Bye!")
                 exit(0)
 
+class new_user:
+    def new_user(self):
+        username = input("""Please select the username you would like to use
+            > """)
+        print (username)
+
+        no_of_trials = 3
+        for tries in range(no_of_trials):
+            user_pin = input("""Please enter a pin you would like to use
+            > """)
+            if (len(user_pin) != 5):
+                print("Please enter a 5 digit pin")
+            else:
+                print("Great!")
+                break
