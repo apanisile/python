@@ -1,6 +1,9 @@
 # Module containing all the functions to be used
 class loan_function:
 
+    def __init__(self):
+        super().__init__()
+        
     def greet(fname, lname, msg="Good morning!"):
         """
         This function greets to

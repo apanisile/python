@@ -2,6 +2,11 @@
 
 from user_details import *
 class existing_user:
+
+        def __init__(self):
+                super().__init__()
+
+                
         def old_user(self):
             prompt_user = input("""Do you want to sign in? (Y)es or (N)o 
                 > """)
