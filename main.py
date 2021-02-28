@@ -11,7 +11,7 @@ if (user_type == "1"):
     print (username)
     user_pin = input("""Please enter a pin you would like to use
     > """)
-    for (len(user_pin) != 5):
+    if (len(user_pin) != 5):
         print("Please enter a 5 digit pin")
     else:
         print("Great!")
